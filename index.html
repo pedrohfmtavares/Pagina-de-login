@@ -9,13 +9,19 @@
 </head>
 <body>
     <main id="principal">
+        <nav>
+            <a href="">Página 1</a>
+            <a href="">Página 2</a>
+            <a href="">Página 3</a>
+            <a href="">Página 4</a>
+        </nav>
         <form class="login">
             <div class="titulo">
                 
-                <h1 id="textoTitulo">-Login-</h1>
+                <h1 id="textoTitulo">-Cadastro-</h1>
                 <br>
                 <p id="subtitulo">Complete suas informações</p>
-                <p class="textoVazio">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+                <p class="textoVazio">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
                 <br>
             </div>
             <div class="campo">
@@ -29,13 +35,29 @@
                 
             </div>
             <div class="campo">
-                <label for="senha"><strong>Senha: &nbsp</strong></label>
+                <label for="senha"><strong>Senha: &nbsp </strong></label>
                 <input type="password" name="senha" id="senha" placeholder="Sua senha" required>
                 
             </div>
             <div class="campo">
-                <label for="cpf"><strong>CPF: &nbsp &nbsp</strong></label>
+                <label for="cpf"><strong>CPF: &nbsp &nbsp &nbsp</strong></label>
                 <input type="number" name="cpf" id="cpf" placeholder="Seu CPF" required>
+            </div>
+            <div class="campo">
+                <label for="cargo"><strong>Cargo : &nbsp</strong></label>
+                <input type="text" name="cargo" id="cargo" placeholder="Seu cargo na empresa" required>
+            </div>
+            <div class="campo">
+                <label for="cargo"><strong>Data de nascimento:</strong></label>
+                <input type="date" name="data" id="data" required>
+            </div>
+            <div class="campo">
+                <label for="genero"><strong>Gênero:</strong></label>
+                <select id="genero" required>
+                  <option>Masculino</option>
+                  <option>Feminino</option>
+                  <option>Outro</option>
+                </select>
             </div>
             <div>
                 <button class="botao" type="submit" onsubmit="">Log in</button>    

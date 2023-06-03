@@ -9,15 +9,40 @@
 
 body {
     background-color: rgb(3, 189, 189);
-    color: cyan;
+    color: rgb(3, 189, 189);
     
+}
+
+
+nav {
+    position: absolute;
+    top: 15px;
+    left: 580px;
+}
+
+
+nav a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #242424;
+    background-color: #f0ebeb;
+    padding: 6px;
+    border-radius: 10px;
+    transition: all 0.5s;
+    font-size: 18px;
+}
+
+
+nav a:hover {
+    padding: 8px;
+    background-color: #bdbdbd;
+    text-decoration: underline;
 }
 
 
 .titulo {
     margin-top: 40px;
     font-size: 25px;
-    
 }
 
 
@@ -33,26 +58,25 @@ body {
 .login {
     position: absolute;
     top: 50px;
-    left: 475px;
-    background-color: black;
+    left: 455px;
+    background-color: #f0ebeb;
     text-align: center;
-    height: 85%;
-    width: 500px;
+    height: 150%;
+    width: 600px;
     border-radius: 15px;
     border: 2px solid cyan;
 }
 
 
 
+#genero {
+    margin-right: 230px;
+}
 
 .campo {
     margin-top: 50px;
-    
 }
 
-label {
-    margin-right: 10px;
-}
 
 
 input {
@@ -84,8 +108,9 @@ input[type=number] {
     color: black;
     padding: 15px;
     margin-top: 30px;
-    margin-left: 20px;
+    margin-left: 12px;
     border-radius: 20px;
+    border: none;
     width: 200px;
     height: 57px;
     transition: all 0.5s;
