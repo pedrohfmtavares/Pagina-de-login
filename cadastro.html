@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+    
+</head>
+<body>
+
+    <main id="main">
+
+
+        <section class="container-form">
+
+            <span>
+                <img src="imagens/cadastro/cadastroIMG.jpeg" alt="" id="imgFormulario">
+            </span>
+
+            <div class="header">
+                <h2>Crie sua conta QualiTech</h2>
+            </div>
+
+            <form class="form" id="form">
+                <section class="form1">
+    
+                    <div class="form-control">
+                        
+                        <label for="username" >Nome completo</label>
+                        <input type="text" id="username" placeholder="João da Silva">
+                        
+        
+                        <small>Error Message</small>
+        
+                    </div>
+        
+                    
+                    <div class="form-control">
+                        
+                        <label>Senha</label>
+                        <input type="password" id="password" placeholder="********">
+                        
+                        
+                        <small>Error Message</small>
+                        
+                    </div>
+                    
+                    <div class="form-control">
+                        
+                        <label>Confirme sua senha</label>
+                        <input type="password" id="password-two" placeholder="Repita a senha">
+                        
+                        
+                        <small>Error Message</small>
+                        
+                    </div>
+                    
+                </section>
+                
+                <section class="form2">
+                    
+                    <div class="form-control">
+        
+                        <label>Email</label>
+                        <input type="email" id="email" placeholder="nome@email.com">
+                        
+        
+                        <small>Error Message</small>
+        
+                    </div>
+
+                    <div class="form-control">
+        
+                        <label for="CPF">CPF</label>
+                        <input type="text" id="CPF" maxlength="14" placeholder="123.456.789-00" pattern="[0-9]+$">
+                        
+        
+                        <small>Error Message</small>
+        
+                    </div>
+        
+                    <div class="form-control">
+        
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" placeholder="Rio de janeiro-Rj">
+                        
+        
+                        <small>Error Message</small>
+        
+                    </div>
+                    
+    
+                </section>
+
+                
+    
+                <button type="submit">ENTRAR</button>
+
+                <span id="spanMudarParaLogin">
+                    <p>
+                        Já possui uma conta? <a href="login.html" id="linkLogin">Faça Login</a>
+                    </p>
+                </span>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="scripts/scriptCadastro.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(247, 247, 247);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    border: 0;
+    overflow-x: hidden;
+
+}
+
+
+html, input, button {
+    font-family: 'Rubik', sans-serif;
+}
+
+
+
+.container-form {
+    background-color: rgb(247, 247, 247);
+    width: 600px;
+    max-width: 100%;
+    align-items: center;
+    position: absolute;
+    top: 110px;
+    left: 55%;
+    border-left: 1px solid #242424;
+    height: 610px;
+}
+
+#imgLogo {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
+
+#imgFormulario {
+    position: absolute;
+    right: 755px;
+    top: 100px;
+}
+
+.form1 {
+    margin-left: 125px;
+    width: 870px;
+}
+
+.form {
+    padding: 0 40px 30px;
+}
+
+
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #242424;
+    font-weight: bold;
+}
+
+.form-control input {
+    border: 1px solid #3E445B;
+    border-radius: 5px;
+    outline: 0;
+    display: block;
+    font-size: 14px;
+    width: 40%;
+    padding: 15px;
+}
+
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+
+.form-control.success input {
+    border: 3px solid #4ECA64;
+}
+
+.form-control.error input {
+    border: 3px solid #DB5A5A;
+}
+
+.form-control.error i.img-error {
+    visibility: visible;
+}
+
+.form-control.success i.img-success {
+    visibility: visible;
+}
+
+.form-control.error small{
+    color: #DB5A5A;
+    visibility: visible;
+}
+
+.form-control i {
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-control small {
+    visibility: hidden;
+    position: absolute;
+    margin-top: 5px;
+    font-size: 14px;
+
+}
+
+
+#spanMudarParaCadastro {
+    position: absolute;
+    bottom: 230px;
+    left: 235px;
+    font-size: 13px;
+    
+}
+
+
+#linkCadastro:hover {
+    color: #1B6679;
+}
+
+
+.form button {
+    background-color: #1B6679;
+    border-radius: 10px;
+    color: #fff;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    width: 355px;
+    margin-top: 5px;
+    cursor: pointer;
+    transform: all 0.5s;
+    position: absolute;
+    right: 80px;
+    border: none;
+}
+
+.form button:hover {
+    background-color: #175767;
+}
+
+
+

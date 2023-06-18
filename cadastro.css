@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(247, 247, 247);
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    border: 0;
+    overflow-x: hidden;
+
+}
+
+
+html, input, button {
+    font-family: 'Rubik', sans-serif;
+}
+
+
+/* nav {
+    position: absolute;
+    top: 35px;
+    left: 1170px;
+    margin: 0;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #242424;
+    transition: all 1s;
+}
+
+nav a:hover {
+    color: rgba(240, 248, 255, 0.181);
+} */
+
+.container-form {
+    background-color: rgb(247, 247, 247);
+    width: 600px;
+    max-width: 100%;
+    align-items: center;
+    position: absolute;
+    top: 110px;
+    left: 55%;
+    border-left: 1px solid #242424;
+    height: 610px;
+}
+
+#imgLogo {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
+
+#imgFormulario {
+    position: absolute;
+    right: 700px;
+    top: 100px;
+}
+
+
+.form1 {
+    margin-left: 20px;
+}
+
+.form2 {
+    position: absolute;
+    left: 320px;
+    top: 93px;
+    width: 100%;
+}
+
+.header {
+    padding: 30px 40px;
+}
+
+.header h2 {
+    font-weight: 600;
+    color: #242424;
+    font-size: 27px;
+    margin-left: 17px;
+   
+}
+
+.form {
+    padding: 0 40px 30px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #242424;
+    font-weight: bold;
+}
+
+.form-control input {
+    border: 1px solid #3E445B;
+    border-radius: 5px;
+    outline: 0;
+    display: block;
+    font-size: 14px;
+    width: 40%;
+    padding: 15px;
+}
+
+
+.form-control.success input {
+    border: 3px solid #4ECA64;
+}
+
+.form-control.error input {
+    border: 3px solid #DB5A5A;
+}
+
+.form-control.error i.img-error {
+    visibility: visible;
+}
+
+.form-control.success i.img-success {
+    visibility: visible;
+}
+
+.form-control.error small{
+    color: #DB5A5A;
+    visibility: visible;
+}
+
+.form-control i {
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-control small {
+    visibility: hidden;
+    position: absolute;
+    margin-top: 5px;
+    font-size: 14px;
+
+}
+
+
+#spanMudarParaLogin {
+    position: absolute;
+    bottom: 132px;
+    left: 205px;
+    font-size: 13px;
+    
+}
+
+
+#linkLogin:hover {
+    color: #1B6679;
+}
+
+
+.form button {
+    background-color: #1B6679;
+    border-radius: 10px;
+    color: #fff;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    width: 45%;
+    margin-top: 5px;
+    cursor: pointer;
+    transform: all 0.5s;
+    position: absolute;
+    right: 165px;
+    border: none;
+}
+
+.form button:hover {
+    background-color: #175767;
+}
+
+
+
+/* ÍCONES */
+
+
+
+#iconeUsername {
+    background-image: url(imagens/icons/uiw_user.svg);
+    width: 20px;
+    height: 20px;
+}
