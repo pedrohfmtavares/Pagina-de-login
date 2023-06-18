@@ -1,67 +1,127 @@
-// const form   = document.getElementById('form');
-// const campos = document.querySelectorAll('.required');
-// const spans  = document.querySelectorAll('.span-required');
-// const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+const form = document.getElementById('form')
+const username = document.getElementById('username')
+const email = document.getElementById('email')
+const password = document.getElementById('password')
+const passwordtwo = document.getElementById('password-two')
+const CPF = document.getElementById('CPF')
+const cidade = document.getElementById('cidade')
 
-// form.addEventListener('submit', (event) => {
-//     event.preventDefault();
-//     nameValidate();
-//     emailValidate();
-//     mainPasswordValidate();
-//     comparePassword();
-// });
 
-// function setError(index){
-//     campos[index].style.border = '2px solid #e63636';
-//     spans[index].style.display = 'block';
-// }
 
-// function removeError(index){
-//     campos[index].style.border = '';
-//     spans[index].style.display = 'none';
-// }
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    
+    checkInputs()
+})
 
-// function nameValidate(){
-//     if(campos[0].value.length < 3)
-//     {
-//         setError(0);
-//     }
-//     else
-//     {
-//         removeError(0);
-//     }
-// }
+function checkInputs() {
+    
+    const usernameValue = username.value.trim()
+    const emailValue = email.value.trim()
+    const passwordValue = password.value.trim()
+    const passwordtwoValue = passwordtwo.value.trim()
+    const CPFvalue = CPF.value.trim()
+    const cidadeValue = cidade.value.trim()
+    
 
-// function emailValidate(){
-//     if(!emailRegex.test(campos[1].value))
-//     {
-//         setError(1);
-//     }
-//     else
-//     {
-//         removeError(1);
-//     }
-// }
+    if(usernameValue === '') {
+        // mostrar erro
+        // add classe
+        setErrorFor(username, 'Preencha esse campo')
+    } else {
+        // adicionar a classe de sucesso
+        setSuccessFor(username)
+    }
+    
+    if(emailValue === '') {
+        // mostrar erro
+        // add classe
+        setErrorFor(email, 'Preencha esse campo')
+    } else if (!isEmail(emailValue)) {
+        setErrorFor(email, 'Email inválido')
+    } else {
+        // adicionar a classe de sucesso
+        setSuccessFor(email)
+    }
+    
+    if(passwordValue === '') {
+        // mostrar erro
+        // add classe
+        setErrorFor(password, 'Preencha esse campo')
+        
+    } else if(passwordValue.length < 8) { 
+        setErrorFor(password, 'Senha deve ter mais que 8 caracteres')
+    } else {
+        // adicionar a classe de sucesso
+        setSuccessFor(password)
+    }
+    
+    if(passwordtwoValue === '') {
+        // mostrar erro
+        // add classe
+        setErrorFor(passwordtwo, 'Preencha esse campo')
 
-// function mainPasswordValidate(){
-//     if(campos[2].value.length < 8)
-//     {
-//         setError(2);
-//     }
-//     else
-//     {
-//         removeError(2);
-//         comparePassword();
-//     }
-// }
+    } else if(passwordValue !== passwordtwoValue) { 
+        setErrorFor(passwordtwo, 'Senhas não estão iguais')
+    } else {
+        // adicionar a classe de sucesso
+        setSuccessFor(passwordtwo)
+    }
+    
+    if(CPFvalue === '') {
+        // mostrar erro
+        // add classe
+        setErrorFor(CPF, 'Preencha esse campo')
+    } else {
+        // adicionar a classe de sucesso
+        setSuccessFor(CPF)
+    }
+    
+    
+    if(cidadeValue === '') {
+        // mostrar erro
+        // add classe
+        setErrorFor(cidade, 'Preencha esse campo')
+    } else {
+        // adicionar a classe de sucesso
+        setSuccessFor(cidade)
+    }
+    
+    
+    
+}
 
-// function comparePassword(){
-//     if(campos[2].value == campos[3].value && campos[3].value.length >= 8)
-//     {
-//         removeError(3);
-//     }
-//     else
-//     {
-//         setError(3);
-//     }
-// }
+function setErrorFor(input, message) {
+    const formControl = input.parentElement;
+    const small = formControl.querySelector('small')
+    
+    small.innerText = message
+    
+    formControl.className = 'form-control error'
+}
+
+function setSuccessFor(input) {
+    const formControl = input.parentElement;
+    
+    formControl.className = 'form-control success'
+}
+
+function isEmail(email) {
+    return /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/.test(email)
+}
+
+
+
+
+const inputCPF = document.querySelector('#CPF')
+
+inputCPF.addEventListener('keypress', () => {
+    let inputLength = inputCPF.value.length
+
+    // MAX LENGHT 14  CPF
+    if (inputLength == 3 || inputLength == 7) {
+        inputCPF.value += '.'
+    }else if (inputLength == 11) {
+        inputCPF.value += '-'
+    }
+})
